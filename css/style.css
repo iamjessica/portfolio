@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none; }
+  * li {
+    margin: 0;
+    padding: 0; }
+
+body {
+  background-image: repeating-linear-gradient(to right, transparent, transparent 20px, rgba(0, 212, 255, 0.25) 20px, rgba(0, 212, 255, 0.25) calc(8.3333333333% - 21.6666666667px + 20px));
+  font-family: 'Arvo', serif; }
+
+section {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  section::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+ul {
+  padding-left: 0;
+  margin-left: 0; }
+
+li {
+  list-style: none; }
+
+header {
+  display: flex;
+  color: #0a000e; }
+  header::after {
+    clear: both;
+    content: "";
+    display: block; }
+  header a:link, header a:visited {
+    color: #fff;
+    text-decoration: none; }
+  header ul {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between; }
+    @media screen and (min-width: 753px) {
+      header ul {
+        width: calc(50% - 30px);
+        float: left;
+        margin-left: 20px;
+        margin-left: calc(50% - 30px + 40px);
+        align-content: flex-end; } }
+
+.action {
+  border: 2px solid #62fbe7;
+  padding: .5em 1em;
+  background: #62fbe7;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  border-radius: 1.5rem;
+  transition: box-shadow;
+  transition-duration: .5s; }
+
+.action:link, .action:visited {
+  color: #0a000e; }
+
+.action:hover, .action:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7); }
+
+.container::after {
+  clear: both;
+  content: "";
+  display: block; }
+
+#hero {
+  height: 75vh;
+  font-family: 'Arvo', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: #A788F9;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #A788F9, #E5ADFD);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient bottom right, #A788F9, #E5ADFD;
+  background: -moz-linear-gradient(bottom right, #A788F9, #E5ADFD);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(bottom right, #A788F9, #E5ADFD);
+  /* Standard syntax (must be last) */
+  color: #fff; }
+  #hero .intro-text {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px; }
+    @media screen and (min-width: 580px) {
+      #hero .intro-text {
+        width: calc(50% - 30px);
+        float: left;
+        margin-left: 20px; } }
+
+#about {
+  font-family: 'Arvo', serif;
+  background: #fdfaff; }
+  #about .about-content {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px; }
+
+#work {
+  background-color: #fff; }
+  #work #gallery .work-div {
+    margin-top: 20px; }
+    #work #gallery .work-div::after {
+      clear: both;
+      content: "";
+      display: block; }
+    #work #gallery .work-div .image-div {
+      position: relative;
+      width: calc(100% - 40px);
+      float: left;
+      margin-left: 20px; }
+      #work #gallery .work-div .image-div img {
+        display: block;
+        max-width: 100%; }
+      @media screen and (min-width: 580px) {
+        #work #gallery .work-div .image-div {
+          width: calc(50% - 30px);
+          float: left;
+          margin-left: 20px; } }
+    #work #gallery .work-div .desription-div {
+      width: calc(100% - 40px);
+      float: left;
+      margin-left: 20px; }
+      @media screen and (min-width: 580px) {
+        #work #gallery .work-div .desription-div {
+          width: calc(50% - 30px);
+          float: left;
+          margin-left: 20px; } }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #0a000e; }
+
+.image-div:hover .overlay {
+  opacity: .8; }
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); }
+
+#contact {
+  background: #fdfaff; }
+  #contact .contact-details {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px; }
+
+footer {
+  background: #fff;
+  border-top: 1px dotted #d8cddd; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,177 @@
+@import "lib/bourbon/bourbon";
+@import "lib/neat/neat";
+
+$break-small: 580px;
+$break-medium: 753px;
+$primary-color: #E5ADFD;
+$secondary-color: #62fbe7;
+$white: #fdfaff;
+$grey: #d8cddd;
+$black: #0a000e;
+
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+body {
+  @include grid-visual;
+  font-family: 'Arvo', serif;
+}
+
+section {
+  @include grid-container;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+li {
+  list-style: none;
+}
+
+header {
+  @include grid-container;
+  display: flex;
+  color: $black;
+  a:link, a:visited {
+    color: #fff;
+    text-decoration: none;
+  }
+  ul {
+    @include grid-column(12);
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-width: $break-medium) {
+      @include grid-column(6);
+      @include grid-push(6);
+      align-content: flex-end;
+
+    }
+  }
+}
+.action {
+  border: 2px solid $secondary-color;
+  padding: .5em 1em;
+  background: $secondary-color;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  border-radius: 1.5rem;
+  transition: box-shadow;
+  transition-duration: .5s;
+}
+.action:link, .action:visited {
+  color: $black;
+}
+.action:hover, .action:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .7);
+}
+
+.container {
+  @include grid-container;
+}
+
+#hero {
+  height: 75vh;
+  font-family: 'Arvo', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: #A788F9; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #A788F9, #E5ADFD); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient (bottom right, #A788F9, #E5ADFD);
+  background: -moz-linear-gradient(bottom right ,#A788F9, #E5ADFD); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(bottom right, #A788F9, #E5ADFD); /* Standard syntax (must be last) */
+  color: #fff;
+  .intro-text {
+    @include grid-column(12);
+    @media screen and (min-width: $break-small) {
+      @include grid-column(6);
+    }
+  }
+}
+
+#about {
+  font-family: 'Arvo', serif;
+  background: $white;
+  .about-content {
+    @include grid-column(12);
+  }
+}
+
+#work {
+  background-color: #fff;
+  #gallery {
+    .work-div {
+      @include grid-container;
+      margin-top: 20px;
+      .image-div {
+        position: relative;
+        @include grid-column(12);
+        img {
+          display: block;
+          max-width: 100%;
+        }
+        @media screen and (min-width: $break-small) {
+          @include grid-column(6);
+        }
+
+      }
+      .desription-div {
+        @include grid-column(12);
+        @media screen and (min-width: $break-small) {
+          @include grid-column(6);
+        }
+      }
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: $black;
+}
+
+.image-div:hover .overlay {
+  opacity: .8;
+}
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+#contact {
+  background: $white;
+  .contact-details {
+    @include grid-column(12);
+  }
+}
+
+
+footer {
+  background: #fff;
+  border-top: 1px dotted $grey;
+}
