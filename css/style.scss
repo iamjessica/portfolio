@@ -20,8 +20,11 @@ $black: #0a000e;
 }
 
 body {
-  @include grid-visual;
   font-family: 'Arvo', serif;
+}
+.wrapper {
+  max-width: 960px;
+  margin: auto;
 }
 
 section {
@@ -31,18 +34,23 @@ section {
 }
 
 
-ul {
+nav ul {
   padding-left: 0;
   margin-left: 0;
+  display: flex;
 }
 li {
   list-style: none;
 }
 
 header {
-  @include grid-container;
-  display: flex;
+  width: 100%;
+
   color: $black;
+  border-bottom: 2px solid $grey;
+  position: fixed;
+  z-index: 10000;
+
   a:link, a:visited {
     color: #fff;
     text-decoration: none;
@@ -80,18 +88,21 @@ header {
   @include grid-container;
 }
 
-#hero {
-  height: 75vh;
-  font-family: 'Arvo', serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+header, #hero {
   background: #A788F9; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left top, #A788F9, #E5ADFD); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient (bottom right, #A788F9, #E5ADFD);
   background: -moz-linear-gradient(bottom right ,#A788F9, #E5ADFD); /* For Firefox 3.6 to 15 */
   background: linear-gradient(bottom right, #A788F9, #E5ADFD); /* Standard syntax (must be last) */
   color: #fff;
+}
+
+#hero {
+  height: 75vh;
+  font-family: 'Arvo', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   .intro-text {
     @include grid-column(12);
     @media screen and (min-width: $break-small) {
@@ -110,7 +121,7 @@ header {
 
 #work {
   background-color: #fff;
-  #gallery {
+  .gallery {
     .work-div {
       @include grid-container;
       margin-top: 20px;
@@ -123,6 +134,7 @@ header {
         }
         @media screen and (min-width: $break-small) {
           @include grid-column(6);
+
         }
 
       }
@@ -130,11 +142,25 @@ header {
         @include grid-column(12);
         @media screen and (min-width: $break-small) {
           @include grid-column(6);
+
         }
       }
     }
   }
 }
+@media screen and (min-width: $break-small) {
+.work-div:nth-child(even) {
+
+    .image-div {
+      @include grid-shift(6);
+    }
+    .desription-div {
+      @include grid-shift(-6);
+    }
+}
+}
+
+
 
 .overlay {
   position: absolute;
