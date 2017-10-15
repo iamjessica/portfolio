@@ -1,16 +1,17 @@
 * {
   box-sizing: border-box;
   text-decoration: none; }
-  * li {
-    margin: 0;
-    padding: 0; }
 
-body {
-  font-family: 'Arvo', serif; }
+li {
+  margin: 0;
+  padding: 0; }
 
 .wrapper {
   max-width: 960px;
   margin: auto; }
+
+body {
+  font-family: "Work Sans", sans-serif; }
 
 section {
   padding-top: 20px;
@@ -30,78 +31,46 @@ li {
 
 header {
   width: 100%;
-  color: #0a000e;
-  border-bottom: 2px solid #d8cddd;
+  background: #fff;
+  color: #000;
+  border-bottom: 1px solid #d8cddd;
   position: fixed;
   z-index: 10000; }
   header a:link, header a:visited {
-    color: #fff;
-    text-decoration: none; }
-  header ul {
+    text-decoration: none;
+    color: #000; }
+  header nav {
     width: calc(100% - 40px);
     float: left;
     margin-left: 20px;
     display: flex;
     justify-content: space-between; }
-    @media screen and (min-width: 753px) {
-      header ul {
-        width: calc(50% - 30px);
-        float: left;
-        margin-left: 20px;
-        margin-left: calc(50% - 30px + 40px);
-        align-content: flex-end; } }
-
-.action {
-  border: 2px solid #62fbe7;
-  padding: .5em 1em;
-  background: #62fbe7;
-  -webkit-border-radius: 1.5rem;
-  -moz-border-radius: 1.5rem;
-  border-radius: 1.5rem;
-  transition: box-shadow;
-  transition-duration: .5s; }
-
-.action:link, .action:visited {
-  color: #0a000e; }
-
-.action:hover, .action:focus {
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7); }
+    header nav a {
+      padding: 1rem; }
 
 .container::after {
   clear: both;
   content: "";
   display: block; }
 
-header, #hero {
-  background: #A788F9;
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, #A788F9, #E5ADFD);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient bottom right, #A788F9, #E5ADFD;
-  background: -moz-linear-gradient(bottom right, #A788F9, #E5ADFD);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(bottom right, #A788F9, #E5ADFD);
-  /* Standard syntax (must be last) */
-  color: #fff; }
-
 #hero {
-  height: 75vh;
-  font-family: 'Arvo', serif;
+  height: 100vh;
+  font-family: "Space Mono", monospace;
   display: flex;
   flex-direction: column;
   justify-content: space-around; }
   #hero .intro-text {
     width: calc(100% - 40px);
     float: left;
-    margin-left: 20px; }
-    @media screen and (min-width: 580px) {
+    margin-left: 20px;
+    margin: auto; }
+    @media screen and (min-width: 753px) {
       #hero .intro-text {
         width: calc(50% - 30px);
         float: left;
         margin-left: 20px; } }
 
 #about {
-  font-family: 'Arvo', serif;
   background: #fdfaff; }
   #about .about-content {
     width: calc(100% - 40px);
@@ -111,11 +80,10 @@ header, #hero {
 #work {
   background-color: #fff; }
   #work .gallery .work-div {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px;
     margin-top: 20px; }
-    #work .gallery .work-div::after {
-      clear: both;
-      content: "";
-      display: block; }
     #work .gallery .work-div .image-div {
       position: relative;
       width: calc(100% - 40px);
@@ -156,10 +124,10 @@ header, #hero {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #0a000e; }
+  background-color: #000; }
 
 .image-div:hover .overlay {
-  opacity: .8; }
+  opacity: 1; }
 
 .text {
   color: white;
@@ -169,95 +137,6 @@ header, #hero {
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%); }
-
-.projectsDiv {
-  width: calc(100% - 40px);
-  float: left;
-  margin-left: 20px; }
-  @media screen and (min-width: 580px) {
-    .projectsDiv {
-      width: calc(50% - 30px);
-      float: left;
-      margin-left: 20px; } }
-
-.taskDiv {
-  min-height: 300px;
-  border: 2px solid #000;
-  word-wrap: break-word; }
-  .taskDiv input {
-    margin: 1rem; }
-  .taskDiv button {
-    border: none;
-    margin-right: .5rem;
-    background: none;
-    font-size: .75rem;
-    transition: background-color 0.5s ease;
-    -webkit-transition: color 0.5s ease;
-    color: #000; }
-    .taskDiv button:hover {
-      color: #777; }
-  .taskDiv ul {
-    padding-left: 0;
-    margin: auto; }
-    .taskDiv ul li {
-      width: 100%;
-      padding: 1rem;
-      list-style: none;
-      border-bottom: 1px solid black;
-      margin: auto; }
-      .taskDiv ul li span {
-        display: inline-block;
-        width: 60%; }
-  .taskDiv #addTaskButton {
-    background: #fff;
-    border: .5px solid black;
-    margin: 1rem;
-    max-width: 100%;
-    height: 2rem;
-    border-radius: none;
-    transition: background-color 0.5s ease;
-    -webkit-transition: background-color 0.5s ease;
-    background-color: #fff; }
-    .taskDiv #addTaskButton:hover {
-      background-color: #e7e7e7; }
-
-.timer-div {
-  background: #F8B195;
-  background: -webkit-linear-gradient(#F8B195, #F67280, #C06C84, #6C5B7B, #355C7D);
-  background: -o-linear-gradient(#F8B195, #F67280, #C06C84, #6C5B7B, #355C7D);
-  background: -moz-linear-gradient(#F8B195, #F67280, #C06C84, #6C5B7B, #355C7D);
-  background: linear-gradient(#F8B195, #F67280, #C06C84, #6C5B7B, #355C7D);
-  background-repeat: no-repeat;
-  margin: auto;
-  padding: 1rem 1rem;
-  font-weight: 300; }
-  .timer-div .timer {
-    margin: 2rem auto;
-    border: solid 3px #fff;
-    border-radius: 100%;
-    text-align: center;
-    height: 200px;
-    width: 200px;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column; }
-    .timer-div .timer p {
-      margin-left: auto;
-      margin-right: auto;
-      color: #fff;
-      font-size: 3rem; }
-  .timer-div .button-container {
-    text-align: center;
-    margin-top: 2rem; }
-    .timer-div .button-container button {
-      height: 60px;
-      width: 60px;
-      margin: .5rem;
-      border-radius: 100%;
-      background: #F67280;
-      color: #fff;
-      border: #fff solid 2px;
-      font-size: .75em; }
 
 #contact {
   background: #fdfaff; }
@@ -269,5 +148,9 @@ header, #hero {
 footer {
   background: #fff;
   border-top: 1px dotted #d8cddd; }
+  footer .footerlinks {
+    text-align: center; }
+    footer .footerlinks img {
+      max-width: 2rem; }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,10 +4,9 @@
   <title>Jessica|Web Developer</title>
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono|Work+Sans" rel="stylesheet">
 
-
-  <meta name="viewport" content=" =device- , initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
 </head>
 
 <body>
@@ -15,10 +14,11 @@
     <nav>
       <ul>
         <li><a onclick="smoothScroll(document.getElementById('about'));" href="#about">About</a></li>
-        <li><a onclick="smoothScroll(document.getElementById('websites'));" href="#websites">Work</a></li>
-        <li><a onclick="smoothScroll(document.getElementById('projects'));" href="#projects">Projects</a></li>
-        <li><a href="http://www.hellojessica.co/blog/">Blog</a></li>
-        <li><a class="action" onclick="smoothScroll(document.getElementById('contact'));" href="#contact">Contact</a></li>
+        <li><a onclick="smoothScroll(document.getElementById('work'));" href="#work">Work</a></li>
+      </ul>
+      <ul>
+        <li><a onclick="smoothScroll(document.getElementById('contact'));" href="#contact">Contact</a></li>
+        <li><a href="">Resume</a></li>
       </ul>
     </nav>
   </header>
@@ -27,23 +27,25 @@
 
       <div class="intro-text  ">
         <h1>Hi there,</h1>
-        <h2>I am a web developer</h2>
-        <h2>And some more stuff about what I do blah</h2>
+        <h2>I'm Jessica Graham</h2>
+        <h2>web developer</h2>
+        <h2></h2>
       </div>
     </section>
 
 
     <section id ="about" class="container">
-      <div class="about-content  ">
-        <p>Most of the time you will find me behind my laptop playing with my new skills on <span class="attention"><a href="https://codepen.io/hellojessicagraham/pens/public">codepen</a></span, learning new tools, taking development courses, working through tech books, and keeping up to date with all things tech.</p>
-          <p>Some of the skills I am developing include <span class="attention">HTML, SCSS/ CSS, JavaScript/ ES6, Git</span>.</p>
+      <div class="about-content">
+        <p>I am a self-taught and self motivated web-developer</p>
+        <p>Most of the time you will find me behind my laptop building and learning cool stuff.
+          <p>Some of the skills I am developing include <span class="attention">HTML, CSS, JavaScript</span>.</p>
           <p>When I'm not coding I enjoy reading, attending tech meet-ups, baking and exploring.</p>
         </div>
       </section>
 
 
 
-      <section id="work">
+      <section id="work" class="container">
         <div>
           <ul class="gallery">
             <li class="work-div">
@@ -102,58 +104,25 @@
         </div>
       </section>
 
-      <section id="projects">
-        <div class="projectsDiv">
-          <div class="taskDiv">
-            <ul id="taskList">
-            </ul>
-            <div id="add-task-area">
-              <input type="text" id="addTaskInput" value="">
-              <button id="addTaskButton">Add Task</button>
-            </div>
-          </div>
-          <!-- <a href="https://codepen.io/hellojessicagraham/pen/mByMWL">pen</a> -->
-          <div class="projectsDiv">
-            <div class="timer-div">
-              <div class="timer">
-                <p>
-                  <span id="minutes">00</span> :
-
-                  <span id="seconds">00</span>
-                </p>
-              </div>
-
-              <div class="button-container">
-                <button id="start"><p>START</p></button>
-                <button id = "pause"><p>PAUSE</p></button>
-                <button id = "reset"><p>RESET</p></button>
-              </div>
-            </div>
-          </div>
-          <a href="https://codepen.io/hellojessicagraham/pen/RgQpBa"></a>
-
-
-        </section>
 
 
 
-        <section id="contact" class="container">
-          <div class="contact-details">
-            <h3>Contact</h3>
-            <h4>Get in touch, I would love to hear from you</h4>
-            <p> You can call me or send me a message at <a class="contact-link" href="tell:+64224716349">+64 224716349</a></p>
-            <p>Or if you'd prefer to email me, say hi at <a class="contact-link"href="mailto:hellojessicagraham@gmail.com">hellojessicagraham@gmail.com</a></p>
-            <h3>Download my <a href="resume/JessicaGrahamResumeforWebsite.pdf" download="jessicagrahamDeveloperResume">resume here</a></h3>
-            <div>
-            </section>
-          </wrapper>
-          <footer>
-            <p>Jessica Graham</p>
-            <p><a class="contact-link"href="mailto:hellojessicagraham@gmail.com">hellojessicagraham@gmail.com</a></p>
-
-
+      <section id="contact" class="container">
+        <div class="contact-details">
+          <h3>Contact</h3>
+          <h4>Get in touch, I would love to hear from you</h4>
+          <p> You can call me or send me a message at <a class="contact-link" href="tell:+64224716349">+64 224716349</a></p>
+          <p>Or if you'd prefer to email me, say hi at <a class="contact-link"href="mailto:hellojessicagraham@gmail.com">hellojessicagraham@gmail.com</a></p>
+          <h3>Download my <a href="resume/JessicaGrahamResumeforWebsite.pdf" download="jessicagrahamDeveloperResume">resume here</a></h3>
+          <div>
+          </section>
+        </wrapper>
+        <footer>
+          <ul class="footerlinks">
+            <a><img src="images/git.png"></a>
+            <a><img src="images/codepen.png"></a>          </ul>
           </footer>
-          <script type="text/javascript" src="js/app.js"></script>
+          <script type="text/javascript" src="js/script.js"></script>
 
         </body>
         </html>
