@@ -3,126 +3,98 @@
 <head>
   <title>Jessica|Web Developer</title>
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Space+Mono|Work+Sans" rel="stylesheet">
+  <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/home.css">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a onclick="smoothScroll(document.getElementById('about'));" href="#about">About</a></li>
-        <li><a onclick="smoothScroll(document.getElementById('work'));" href="#work">Work</a></li>
-      </ul>
-      <ul>
-        <li><a onclick="smoothScroll(document.getElementById('contact'));" href="#contact">Contact</a></li>
-        <li><a href="">Resume</a></li>
-      </ul>
-    </nav>
-  </header>
-  <div class="wrapper">
-    <section id="hero" class="container">
-
-      <div class="intro-text  ">
+  <!-- <header>
+  <nav>
+  <ul>
+  <li><a onclick="smoothScroll(document.getElementById('about'));" href="#about">About</a></li>
+  <li><a onclick="smoothScroll(document.getElementById('work'));" href="#work">Work</a></li>
+  <li><a onclick="smoothScroll(document.getElementById('contact'));" href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header> -->
+<div class="wrapper">
+  <section id="hero">
+    <div class="intro-container">
+      <div class="intro-text">
         <h1>Hi there,</h1>
-        <h2>I'm Jessica Graham</h2>
-        <h2>web developer</h2>
-        <h2></h2>
+        <h2>I'm Jessica Graham,</h2>
+        <h3>I am a web developer living in Melbourne, Australia</h3>
+        <p>I am a self taught web developer. Some of my skills include HTML5, CSS3 and JavaScript.</p>
+        <p>You'll usually find me behind my laptop <a class="highlight" href="https://codepen.io/hellojessicagraham">tinkering</a>, <a class="highlight" href="https://github.com/iamjessica">building stuff</a>, and <a class="highlight" href="https://teamtreehouse.com/hellojessicagraham">expanding my skills</a> as a developer.</p>
+        <p>When I'm not coding I enjoy reading, exploring, baking and attending Meetups.</p>
       </div>
-    </section>
 
-
-    <section id ="about" class="container">
-      <div class="about-content">
-        <p>I am a self-taught and self motivated web-developer</p>
-        <p>Most of the time you will find me behind my laptop building and learning cool stuff.
-          <p>Some of the skills I am developing include <span class="attention">HTML, CSS, JavaScript</span>.</p>
-          <p>When I'm not coding I enjoy reading, attending tech meet-ups, baking and exploring.</p>
+      <ul id="contact">
+        <li><a href="mailto:hellojessicagraham@gmail.com?Subject=Hi%20Jess" target="_top"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+          hellojessicagraham@gmail.com</a></li>
+          <li class="resume"><a href=""><i class="fa fa-file-text-o" aria-hidden="true"></i>
+            Resume</a></li>
+          </ul>
+          <ul class="social">
+            <li><a class="link" href="https://github.com/iamjessica"><i class="fa fa-github-alt" aria-hidden="true" title="GitHub"></i></a></li>
+            <li><a class="link" href="https://codepen.io/hellojessicagraham"><i class="fa fa-codepen" aria-hidden="true" title="CodePen"></i></a></li>
+            <li><a class="link" href="https://medium.com/@hellojessicagraham"><i class="fa fa-medium" aria-hidden="true" title="Medium"></i></a></li>
+          </ul>
         </div>
       </section>
-
-
 
       <section id="work" class="container">
         <div>
           <ul class="gallery">
             <li class="work-div">
-              <div class="image-div">
-                <img src="images/stock1.jpg">
-                <div class="overlay">
-                  <p class="text">Description about this piece of work</p>
-                </div>
-              </div>
-              <div class="desription-div">
-                <p>A blurb about this piece of work</p>
-                <p>A blurb about this piece of work</p>
-                <p>A blurb about this piece of work</p>
-              </div>
+              <a href="work/bordellio.html">
+                <div class="work-image-div">
+                  <img src="images/bordellioscreen.png" alt="www.bordellio.com.au">
+
+              </a>
             </li>
+
             <li class="work-div">
-              <div class="image-div">
-                <img src="images/stock2.jpg">
-                <div class="overlay">
-                  <p class="text">Description about this piece of work</p>
-                </div>
-              </div>
-              <div class="desription-div">
-                <p>A blurb about this piece of work</p>
-                <p>A blurb about this piece of work</p>
-                <p>A blurb about this piece of work</p>
-              </div>
+              <a href="work/eloranorman.html">
+                <div class="work-image-div">
+                  <img src="images/elorastees.png" alt="www.eloranorman.design">
+              </a>
             </li>
+
             <li class="work-div">
-              <div class="image-div">
-                <img src="images/stock3.jpg">
-                <div class="overlay">
-                  <p class="text">Description about this piece of work</p>
-                </div>
+              <a href="work/colourist.html">
+                <div class="work-image-div">
+                  <img src="images/colouristscreen.png" alt="colourist portfolio">
+                </a>
               </div>
-              <div class="desription-div">
-                <p>A blurb about this piece of work</p>
-                <p>A blurb about this piece of work</p>
-                <p>A blurb about this piece of work</p>
-              </div>
-            </li>
+            </a>
+          </li>
+
             <li class="work-div">
-              <div class="image-div">
-                <img src="images/stock4.jpg">
-                <div class="overlay">
-                  <p class="text">Description about this piece of work</p>
-                </div>
-              </div>
-              <div class="desription-div">
-                <p>A blurb about this piece of work</p>
-                <p>A blurb about this piece of work</p>
-                <p>A blurb about this piece of work</p>
-              </div>
+              <a href="work/bellefleur.html">
+                <div class="work-image-div">
+                  <img src="images/bellefleurscreen.png" alt="www.bellefleurnailandbeauty.com">
+              </a>
             </li>
-          </ul>
-        </div>
-      </section>
 
+        </ul>
+      </div>
 
+    </section>
 
+    <footer>
+      <a class="link" href="mailto:hellojessicagraham@gmail.com?Subject=Hi%20Jess" target="_top">hellojessicagraham@gmail.com</a>
+      <ul class="social">
+        <li><a class="link" href="https://github.com/iamjessica"><i class="fa fa-github-alt" aria-hidden="true" title="GitHub"></i></a></li>
+        <li><a class="link" href="https://codepen.io/hellojessicagraham"><i class="fa fa-codepen" aria-hidden="true" title="CodePen"></i></a></li>
+        <li><a class="link" href="https://medium.com/@hellojessicagraham"><i class="fa fa-medium" aria-hidden="true" title="Medium"></i></a></li>
+      </ul>
+    </footer>
 
-      <section id="contact" class="container">
-        <div class="contact-details">
-          <h3>Contact</h3>
-          <h4>Get in touch, I would love to hear from you</h4>
-          <p> You can call me or send me a message at <a class="contact-link" href="tell:+64224716349">+64 224716349</a></p>
-          <p>Or if you'd prefer to email me, say hi at <a class="contact-link"href="mailto:hellojessicagraham@gmail.com">hellojessicagraham@gmail.com</a></p>
-          <h3>Download my <a href="resume/JessicaGrahamResumeforWebsite.pdf" download="jessicagrahamDeveloperResume">resume here</a></h3>
-          <div>
-          </section>
-        </wrapper>
-        <footer>
-          <ul class="footerlinks">
-            <a><img src="images/git.png"></a>
-            <a><img src="images/codepen.png"></a>          </ul>
-          </footer>
-          <script type="text/javascript" src="js/script.js"></script>
-
-        </body>
-        </html>
+  </div>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

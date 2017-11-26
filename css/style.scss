@@ -1,181 +1,94 @@
 @import "lib/bourbon/bourbon";
 @import "lib/neat/neat";
 
+/* =====================================
+Variables
+======================================== */
 $break-small: 580px;
 $break-medium: 753px;
-$primary-color: #E5ADFD;
-$secondary-color: #62fbe7;
-$white: #fdfaff;
-$grey: #d8cddd;
-$black: #000;
+$break-large: 992px;
+$white: #FFF;
+$grey: #7F7F7F;
 
 $header-font: 'Space Mono', monospace;
 $content-font: 'Work Sans', sans-serif;
 
+/* =====================================
+Main styles
+======================================== */
 * {
   box-sizing: border-box;
   text-decoration: none;
 }
-  li {
-    margin: 0;
-    padding: 0;
-  }
 .wrapper {
   max-width: 960px;
   margin: auto;
 }
 body {
-font-family: $content-font;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  font-family: $content-font;
 }
-section {
-  @include grid-container;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-nav ul {
+ul {
   padding-left: 0;
   margin-left: 0;
-  display: flex;
 }
 li {
+  margin-left: 0;
+  padding-left: 0;
   list-style: none;
 }
 
-header {
-  width: 100%;
-  background: #fff;
-  color: $black;
-  border-bottom: 1px solid $grey;
-  position: fixed;
-  z-index: 10000;
-
-  a:link, a:visited {
-    text-decoration: none;
-    color: #000;
-  }
-  nav {
-    @include grid-column(12);
-    display: flex;
-    justify-content: space-between;
-
-    a {
-      padding: 1rem;
-    }
-  }
+a,
+a:visited {
+  color: $grey;
 }
 
-.container {
-  @include grid-container;
+//Link hover effect
+.link {
+  position: relative;
+  padding-bottom: 2px;
 }
-
-
-#hero {
-  height: 100vh;
-  font-family: $header-font;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  .intro-text {
-    @include grid-column(12);
-    margin: auto;
-    @media screen and (min-width: $break-medium) {
-      @include grid-column(6);
-    }
-  }
-}
-
-#about {
-  background: $white;
-  .about-content {
-    @include grid-column(12);
-  }
-}
-
-#work {
-  background-color: #fff;
-  .gallery {
-    .work-div {
-      @include grid-column(12);
-      margin-top: 20px;
-      .image-div {
-        position: relative;
-        @include grid-column(12);
-        img {
-          display: block;
-          max-width: 100%;
-        }
-        @media screen and (min-width: $break-small) {
-          @include grid-column(6);
-        }
-      }
-      .desription-div {
-        @include grid-column(12);
-        @media screen and (min-width: $break-small) {
-          @include grid-column(6);
-        }
-      }
-    }
-  }
-}
-
-
-@media screen and (min-width: $break-small) {
-  .work-div:nth-child(even) {
-
-    .image-div {
-      @include grid-shift(6);
-    }
-    .desription-div {
-      @include grid-shift(-6);
-    }
-  }
-}
-
-
-
-.overlay {
+.link::after {
+  content: " ";
   position: absolute;
-  top: 0;
-  bottom: 0;
+  bottom: 0px;
   left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: $black;
+  height: 2px;
+  width: 0%;
+  background: transparent;
 }
-
-.image-div:hover .overlay {
-  opacity: 1;
-}
-.text {
-  color: white;
-  font-size: 20px;
+.link:hover::after {
+  content: " ";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  bottom: 0px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: #FE94EE;
+  opacity: .2;
+  transition: all .25s;
 }
 
-
-#contact {
-  background: $white;
-  .contact-details {
-    @include grid-column(12);
-  }
+//default max-width of all images 100% of parent container
+img {
+  max-width: 100%;
 }
 
-
+/* =====================================
+Footer
+======================================== */
 footer {
-  background: #fff;
-  border-top: 1px dotted $grey;
-  .footerlinks {
-    text-align: center;
-    img {
-      max-width: 2rem;
+  border-top: 1px solid $grey;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: .75rem;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    li {
+      padding: 1rem;
     }
   }
 }

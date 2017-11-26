@@ -1,0 +1,99 @@
+@import "style.scss";
+
+
+#hero {
+  font-family: $header-font;
+  border-bottom: 1px solid $grey;
+  .intro-container{
+    @include grid-container;
+    max-width: 753px;
+    margin: auto;
+    @media screen and (min-width: $break-medium) {
+      padding: 4rem 0;
+    }
+    .intro-text {
+      @include grid-column(12);
+    }
+
+    //contact info in hero
+    #contact {
+      @include grid-container;
+      li{
+        @include grid-column(12);
+        padding: 1em 0;
+        @media screen and (min-width: $break-medium) {
+          @include grid-column(6);
+        }
+      }
+    }
+
+    //social links in intro
+    .social {
+      @include grid-container;
+      li {
+        @include grid-column(1);
+      }
+    }
+  }
+}
+
+
+//thick highlight on links in description and hover effect
+.intro-text a {
+  white-space: nowrap;
+  position: relative;
+  padding-bottom: 2px;
+}
+.highlight::after {
+  content: " ";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  height: 2px;
+  width: 50%;
+  background: #FE94EE;
+}
+.highlight:hover::after {
+  content: " ";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  height: 1.5em;
+  width: 110%;
+  opacity: 0.5;
+  background: #FE94EE; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#FE94EE, #9496E4); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#FE94EE, #9496E4); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#FE94EE, #9496E4); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#FE94EE, #9496E4); /* Standard syntax */
+  transition:  all .25s;
+}
+
+
+//Work container
+#work {
+  @include grid-container;
+  padding: 3rem 0;
+  max-width: 1000px;
+}
+
+//Gallery styles
+.gallery {
+  .work-div {
+    margin: 3rem auto;
+    @include grid-column(12);
+    @media screen and (min-width: $break-medium) {
+      @include grid-column(6);
+    }
+    @media screen and (min-width: $break-large) {
+      @include grid-column(4);
+    }
+    .work-image-div {
+      width: 100%;
+      position: relative;
+      img {
+        display: block;
+      }
+    }
+  }
+}

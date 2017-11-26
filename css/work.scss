@@ -1,0 +1,15 @@
+@import "style.scss";
+header {
+  @include grid-container;
+  border-bottom: 1px solid $grey;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.work-container{
+  @include grid-container;
+  .work-image, .work-text {
+    @media screen and (min-width: $break-small) {
+      @include grid-column(6);
+    }
+  }
+}
