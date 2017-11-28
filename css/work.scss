@@ -1,15 +1,14 @@
 @import "style.scss";
-header {
-  @include grid-container;
-  border-bottom: 1px solid $grey;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
+
 .work-container{
   @include grid-container;
+  min-height: calc(100vh - (160px + 7rem));
   .work-image, .work-text {
-    @media screen and (min-width: $break-small) {
+    @media screen and (min-width: $break-medium) {
       @include grid-column(6);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+
     }
   }
 }

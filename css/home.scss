@@ -8,6 +8,7 @@
     @include grid-container;
     max-width: 753px;
     margin: auto;
+    padding-bottom: 1rem;
     @media screen and (min-width: $break-medium) {
       padding: 4rem 0;
     }
