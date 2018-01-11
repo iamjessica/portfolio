@@ -21,3 +21,8 @@ window.smoothScroll = function(target) {
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
 
+
+var unavailableLink = document.getElementById("unavailable-link")
+unavailableLink.addEventListener("click", function(event){
+    event.preventDefault()
+});
